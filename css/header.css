@@ -1,0 +1,176 @@
+/* common */
+body {
+  margin: 0px;
+  background: url(../img/bg-wego.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:active,
+a:hover {
+  color: #000;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.blind {
+  display: none;
+}
+/* header */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e7e7e7;
+  position: relative;
+  background-color: rgb(220, 237, 195);
+}
+.logo {
+  display: block;
+  width: 180px;
+  height: 50px;
+  background: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.navbar li {
+  display: inline-block;
+  padding: 0 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.navbar li:hover {
+  border-radius: 20px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+.user {
+  position: relative;
+}
+.menubar {
+  display: none;
+  width: 120px;
+  height: 180px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px 1px lightgray;
+  padding: 10px 10px 30px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+.menubar li {
+  margin: 20px 10px;
+}
+.menubar li:nth-last-of-type(1) > a {
+  display: inline-block;
+  margin-top: 20px;
+  color: red;
+}
+.user-profile-img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.login-btn {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url(../svg/login.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.search-bar {
+  width: 280px;
+  border-radius: 30px;
+  padding: 12px 20px;
+  background-color: #e7e7e7;
+  position: absolute;
+  top: 100px;
+}
+.search-bar > form {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+}
+#search {
+  width: 210px;
+  border: 0;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  background: none;
+}
+.search-bar .search-icon {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  color: gray;
+  display: inline-block;
+  background: url(../svg/search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.hidden {
+  width: 20px;
+  height: 20px;
+}
+.search-bar .cancel {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: url(../svg/cancle.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 35px;
+    height: 35px;
+    background: url(../svg/main-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .login-btn {
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background: url(../svg/login.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .navbar li {
+    padding: 0 5px;
+  }
+  .navbar li:hover {
+    border-radius: 10px;
+    padding: 5px 5px;
+    background-color: #fff;
+  }
+}
