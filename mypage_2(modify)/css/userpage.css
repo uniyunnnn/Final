@@ -31,23 +31,35 @@ tbody > td {
   position: relative;
   border-radius: 15px;
 }
-
 .contents > h2 {
   text-align: center;
-  margin-top: 0px;
 }
-
 .content1 {
   margin-bottom: 32px;
 }
 .content2 {
   margin-bottom: 0;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 838px) {
   .cotents {
-    margin: 0;
     min-height: max-content;
     font-size: 15px;
+  }
+  .middle .t1 {
+    width: 60px;
+  }
+  .middle .t3,
+  .middle .t4 {
+    width: 80px;
+  }
+}
+/* 모바일일때  */
+@media screen and (max-width: 756px) {
+  .cotents {
+    margin: 5px;
+    font-size: 12px;
+    min-height: max-content;
   }
   /* 모바일일때 글내용 작게해줘~  */
   table {
@@ -56,43 +68,21 @@ tbody > td {
   }
   th,
   td {
-    font-size: 15px;
+    font-size: 13px;
   }
   tbody > td {
     margin: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  .middle .t1 {
-    width: 60px;
-  }
   .middle .t2 {
-    width: 140px;
+    width: 150px;
   }
   .middle .t3 {
-    width: 60px;
+    width: 80px;
   }
+  .middle .t1,
   .middle .t4 {
-    width: 45px;
-  }
-}
-/* @media screen and (max-width: 570px) {
-
-} */
-@media screen and (max-width: 600px) {
-  .cotents {
-    width: auto;
-    margin: 5px;
-    font-size: 12px;
-    min-height: max-content;
-  }
-  .middle .t3 {
     display: none;
-  }
-  .middle .t2 {
-    width: 140px;
-  }
-  .middle .t4 {
-    width: 45px;
   }
 }
