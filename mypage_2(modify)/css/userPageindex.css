@@ -191,7 +191,7 @@ h2 {
 }
 
 /* 모바일일때  */
-@media screen and (max-width: 821px) {
+@media screen and (max-width: 838px) {
   .mypage-container {
     padding: 0px 2.5%;
     gap: 0;
