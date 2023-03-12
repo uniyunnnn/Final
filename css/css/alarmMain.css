@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+body{
+    width: 100vw;
+    background-color: #fff;
+
+}
+header{
+    position: fixed;
+    
+}
