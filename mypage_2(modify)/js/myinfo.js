@@ -322,11 +322,99 @@ function gugunSecond(val) {
   }
 }
 
-function sidoChoice1() {
-  //구현3
-  if (document.getElementById("sido1").value == "") {
-    alert("'시/도'를 입력하세요");
-    document.getElementById("sido1").focus();
-    return false; //return 반환하다. return false: 아무것도 반환하지 말아라. 아래 코드부터 아무것도 진행하지 말것.
+// 변경한 내용최종 전송
+let modal = document.querySelector(".myinfo-update");
+let upload = document.querySelector("#upload");
+let restart = document.querySelector("#restart");
+let preferences = document.querySelector(".only-one");
+let myPick = document.querySelector(".userPick");
+
+preferences.addEventListener("click", () => {
+  $(this).prop("checked", true);
+});
+myPick.addEventListener("click", () => {
+  $(this).prop("checked", true);
+});
+
+restart.addEventListener("click", () => {
+  modal.style.display = "none";
+  $$("#city1").innerHTML = "시/도";
+  $$("#city2").innerHTML = "시/군/구";
+  document.querySelector("select[name=gugun1]").value = "";
+  document.querySelector("select[name=sido1]").value = "";
+
+  // "select[name=gugun1]") 이건 왜 초기화가 안되지;
+});
+
+upload.addEventListener("click", () => {
+  modal.style.display = "block";
+
+  //로그 test
+  console.log(
+    "My Info 위치 submit test : ",
+    document.querySelector("select[name=sido1]").value
+  );
+  console.log(
+    "My Info 시군구 submit test : ",
+    document.querySelector("select[name=gugun1]").value
+  );
+});
+
+//회원탈퇴 모달창
+var withdrawbox = document.querySelector(".withdraw-box");
+var withdrawset = document.querySelector(".myinfo button");
+withdrawset.onclick = function () {
+  withdrawbox.classList.toggle("active");
+};
+var closebutton3 = document.querySelector(".closebutton3");
+closebutton3.onclick = function () {
+  withdrawbox.className = "withdraw-box";
+};
+var withdwawno = document.querySelector(".withdwaw-no");
+withdwawno.onclick = function () {
+  withdrawbox.className = "withdraw-box";
+};
+
+//회원탈퇴 모달창2
+var withdrawbox2 = document.querySelector(".withdraw-box2");
+var withdwawyes = document.querySelector(".withdwaw-yes");
+withdwawyes.onclick = function () {
+  withdrawbox.className = "withdraw-box";
+  setTimeout(function () {
+    withdrawbox2.classList.toggle("active");
+  }, 200);
+};
+var closebutton4 = document.querySelector(".closebutton4");
+closebutton4.onclick = function () {
+  withdrawbox2.className = "withdraw-box2";
+};
+var withdwawno2 = document.querySelector(".withdwaw-no2");
+withdwawno2.onclick = function () {
+  withdrawbox2.className = "withdraw-box2";
+};
+
+var tx;
+// 회원탈퇴 입력시 회원탈퇴처리완료/잘못되었다는 문구 출력
+function getTextValue() {
+  txObj = document.getElementsByName("tx");
+  tx = txObj[0].value;
+  var withdraw3h2 = document.getElementById("withdraw3h2");
+  if (tx == "회원탈퇴") {
+    alert("같은 값입니다.");
+  } else {
+    alert("다른 값입니다");
   }
 }
+
+//회원탈퇴 모달창3
+var withdrawbox3 = document.querySelector(".withdraw-box3");
+var withdwawyes2 = document.querySelector(".withdwaw-yes2");
+withdwawyes2.onclick = function () {
+  setTimeout(function () {
+    withdrawbox3.classList.toggle("active");
+  }, 200);
+};
+var withdwawno2 = document.querySelector(".withdwaw-no2");
+withdwawno2.onclick = function () {
+  withdrawbox2.className = "withdraw-box2";
+};

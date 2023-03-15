@@ -4,20 +4,15 @@ let imgPath; // 업로드 이미지 임시 저장 변수
 let isReadyUpload = false; // 파일 업로드 가능여부
 
 //닉네임 변경
-var nickbox = document.querySelector('.nickname-box');
-    var nameset = document.querySelector('.name-setting');
-    nameset.onclick = function(){
-        nickbox.classList.toggle('active');
-    }
-    var closebutton2 = document.querySelector('.closebutton2');
-    closebutton2.onclick=function(){
-        nickbox.className = 'nickname-box';
-    }
-
-// // 취소 버튼 이벤트
-// $$("#cancle").addEventListener("click", () => {
-//   $$(".check-again .unload").style.display = "block";
-// });
+var nickbox = document.querySelector(".nickname-box");
+var nameset = document.querySelector(".name-setting");
+nameset.onclick = function () {
+  nickbox.classList.toggle("active");
+};
+var closebutton2 = document.querySelector(".closebutton2");
+closebutton2.onclick = function () {
+  nickbox.className = "nickname-box";
+};
 
 // 이미지 추가 버튼 클릭 이벤트
 $$(".profile-image-button").addEventListener("click", () => {
@@ -144,39 +139,3 @@ const handleUpdate = (files) => {
     reader.readAsDataURL(file);
   });
 };
-
-// 작성 중 취소 -> 예(Red Button)이벤트
-$$(".unload input[type=reset]").onclick = () => {
-  const elem = $$(".profile-image");
-
-  while (elem.firstChild) {
-    elem.removeChild(elem.firstChild);
-  } // while
-};
-
-// 드래그 앤 드롭으로 파일 업로드 하기 위한 기본 이벤트 방지
-$$(".drag-and-drop").ondragover = (e) => e.preventDefault();
-$$(".drag-and-drop").ondragleave = (e) => e.preventDefault();
-
-// 변경 버튼 클릭 이벤트
-$$(".drag-and-drop + button").onclick = (e) => {
-  if (imgPath === undefined || !isReadyUpload) {
-    return false;
-  }
-  $$(".add-profile-image").style.display = "none";
-  $$(".profile-image").innerHTML = imgPath ?? "";
-};
-
-// 드래그 앤 드롭 대신 클릭으로 업로드 할 때
-$$(".drag-and-drop").onclick = () => getTextFile();
-
-
-
-// Enter키로 인한 submit 방지 이벤트
-document.forms[0].addEventListener("keydown", (e) => {
-  if (e.key === "Enter" && e.target.id !== "text") {
-    e.preventDefault();
-    return false;
-  } // if
-});
-

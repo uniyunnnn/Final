@@ -69,6 +69,7 @@
       <!-- Contents -->
       <section>
         <div class="mypage-container">
+          <!-- 닉네임 새롬님 변경부분 -->
           <form action="#" method="post" class="container">
             <!-- form 필수값 검증 후 값이 없는 경우 알림 -->
             <div class="alert-window">
@@ -79,14 +80,14 @@
               <button type="button">확인</button>
             </div>
 
-            <!-- 새롬님이 만든  닉네임 변경  -->
+            <!--  닉네임 변경  -->
             <div class="nickname-box">
               <div class="nick-header">
                 <span>사용할 닉네임을 입력해주세요</span>
               </div>
               <form action="#">
                 <div class="nickname-input">
-                  <input type="text" placeholder="한라산 좋아요" />
+                  <input type="text" placeholder="등산쟁이" />
                   <span class="ion"
                     ><ion-icon name="checkmark-circle-outline"></ion-icon>
                     <ion-icon name="close-circle-outline"></ion-icon
@@ -103,15 +104,17 @@
                 ></a>
               </div>
             </div>
-            <script
-              type="module"
-              src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-            ></script>
-            <script
-              nomodule
-              src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-            ></script>
+          </form>
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+          ></script>
 
+          <form action="#" method="post" class="container">
             <!--  프로필 메인  -->
             <div class="profile">
               <div class="profile-image"></div>
@@ -129,7 +132,7 @@
                     파일을 업로드 하세요. (최대 20MB)
                   </p>
                 </div>
-                <button type="button">변경</button>
+                <button type="submit">변경</button>
               </div>
 
               <div class="wrap">
@@ -138,7 +141,6 @@
                 </div>
 
                 <!--  사진 변경 옆라인 -->
-
                 <div class="name-badge-setting">
                   <div class="div-name-setting">
                     <span class="nickname">닉네임</span>
@@ -160,30 +162,24 @@
                     <!--적용 -->
                     <div class="badge-item1" id="1003">
                       <div class="sanBadge"></div>
-                      <!-- <div class="badgeName">참대왕</div> -->
                     </div>
                     <div class="badge-item2" id="1">
                       <div class="sanBadge"></div>
-                      <!-- <div class="badgeName">가리산</div> -->
                     </div>
                     <div class="badge-item3" id="4">
                       <div class="sanBadge"></div>
-                      <!-- <div class="badgeName">가지산</div> -->
                     </div>
                     <div class="badge-item4" id="5">
                       <div class="sanBadge"></div>
-                      <!-- <div class="badgeName">감악산</div> -->
                     </div>
                     <div class="badge-item5" id="93">
                       <div class="sanBadge"></div>
-                      <!-- <div class="badgeName">한라산</div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </form>
-          <!-- 프로필 form태그 끝 -->
 
           <!-- 프로필 아래  네비  -->
           <div id="content-section">
@@ -204,7 +200,7 @@
           </div>
 
           <!-- 해당 네비 내용물들 -->
-          <form action="./js/user_info.js" method="post">
+          <form action="#" method="post">
             <!-- 내용물 시작  -->
 
             <div class="cotents">
@@ -229,7 +225,6 @@
                     id="sido1"
                     class="sido"
                     onchange="sidoFirst(this.value)"
-                    onfocus="sidoChoice1()"
                   ></select>
                   <select
                     name="gugun1"
@@ -252,7 +247,6 @@
                     value="시내"
                     id="radios1"
                     class="only-one"
-                    checked
                   /><label for="radios1">시내</label>
                   <input
                     type="radio"
@@ -285,13 +279,12 @@
                       name="user-taste-pick"
                       value="1"
                       id="taste1"
+                      class="userPick"
                     />
                     <img
                       src="https://picsum.photos/id/690/600/500"
                       alt="img"
-                    /><label for="user-taste"
-                      >&#127794; 가까운 산 &#127794;</label
-                    >
+                    /><label for="taste1">&#127794; 가까운 산 &#127794;</label>
                   </div>
                   <div class="my-taste-pick">
                     <input
@@ -299,13 +292,12 @@
                       name="user-taste-pick"
                       value="2"
                       id="taste2"
+                      class="userPick"
                     />
                     <img
                       src="https://picsum.photos/id/694/600/500"
                       alt="img"
-                    /><label for="user-taste"
-                      >&#127794; 어려운 산 &#127794;</label
-                    >
+                    /><label for="taste2">&#127794; 어려운 산 &#127794;</label>
                   </div>
                   <div class="my-taste-pick">
                     <input
@@ -313,43 +305,68 @@
                       name="user-taste-pick"
                       value="3"
                       id="taste3"
+                      class="userPick"
                     />
                     <img src="https://picsum.photos/id/684/600/500" alt="img" />
-                    <label for="user-taste"
-                      >&#127794; 인기많은 산&#127794;</label
-                    >
+                    <label for="taste3">&#127794; 인기많은 산&#127794;</label>
                   </div>
                   <br />
-                  <!-- 설정한값을 form으로 한번에 전송하나? 각자 가두데나? -->
-                  <input
-                    type="submit"
-                    value="Submit"
-                    style="display: none"
-                    disabled
-                  />
                   <hr />
                 </div>
               </div>
-              <div class="my-withdrawal">
-                <button type="submit" id="end" oncliker="" ="회원탈퇴">
+              <!-- 위 설정한값을 form으로 한번에 전송하나? 각자 가두데나? -->
+              <div class="myinfo">
+                <button type="button" id="end">
                   회원탈퇴
                 </button>
-                <button type="submit" id="my-city-commit">변경내용</button>
-                <!-- 프로필 수정  -->
-                <div class="check-again">
-                  <div class="upload">
-                    <p>프로필을 수정하시겠습니까?</p>
-                    <input type="button" value="아니오" />
-                    <input type="submit" value="예" />
-                  </div>
-                  <div class="unload">
-                    <p>
-                      변경한 프로필 내용이 취소됩니다.<br />
-                      취소하시겠습니까?
-                    </p>
-                    <input type="button" value="아니오" />
-                    <input type="reset" value="예" />
-                  </div>
+                <button type="button" id="upload">변경내용저장</button>
+              </div>
+              
+            <!-- 회원탈퇴 모달창-->
+            <div class="withdraw-box">
+              <div class="withdraw-text">
+                <h2>탈퇴안내문구</h2>
+                <p>탈퇴시 모든 활동내역이 삭제됩니다.</br>탈퇴하시겠습니까?</p>
+              </div>
+              <div class="withdwaw-button">
+                <button type="button" class="withdwaw-no">아니요</button>
+                <button type="button" class="withdwaw-yes">예</button>
+              </div>
+              <div>
+                <a href="#" class="closebutton3"><ion-icon name="close-outline"></ion-icon></a>
+              </div>
+            </div>
+            <!-- 회원탈퇴2 모달창-->
+            <div class="withdraw-box2">
+              <div class="withdraw-text2">
+                <h2>탈퇴하시려면 아래 입력창에<br>
+                  “ 회원탈퇴 ” 라고 입력해주세요.</h2>
+                <input name="tx" type="text" placeholder="회원탈퇴문구입력창">
+              </div>
+              <div class="withdwaw-button">
+                <button type="button" class="withdwaw-no2">아니요</button>
+                <button type="button" onClick="getTextValue()" class="withdwaw-yes2">예</button>
+              </div>
+              <div>
+                <a href="#" class="closebutton4"><ion-icon name="close-outline"></ion-icon></a>
+              </div>
+            </div>
+            <!-- 회원탈퇴3 모달창-->
+            <div class="withdraw-box3">
+              <div class="withdraw-text3">
+                <h2 id="withdraw3h2">sdfd</h2>
+              </div>
+              <div class="withdwaw-button3">
+                <button type="button" class="withdwaw-yes3">확인</button>
+              </div>
+            </div>
+
+              <!-- 프로필 수정  -->
+              <div class="myinfo-update">
+                <div class="myinfo-upload">
+                  <p>내 정보를 수정하시겠습니까?</p>
+                  <input type="reset" id="restart" value="아니오" />
+                  <input type="submit" id="test" value="예" />
                 </div>
               </div>
             </div>
@@ -358,10 +375,6 @@
       </section>
       <a href="#" class="scrollToTop">
         <img src="./svg/top.svg" />
-      </a>
-
-      <a href="#" class="chat">
-        <img src="./svg/chat.svg" />
       </a>
       <!-- Footer Start -->
       <footer>

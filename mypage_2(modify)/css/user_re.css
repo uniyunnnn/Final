@@ -40,7 +40,19 @@ tbody > td {
 .content2 {
   margin-bottom: 0;
 }
-
+.middle .t1 {
+  width: 70px;
+}
+.middle .t2 {
+  width: 300px;
+}
+.middle .t3,
+.middle .t4 {
+  width: 120px;
+}
+.middle .t5 {
+  width: 70px;
+}
 @media screen and (max-width: 838px) {
   .cotents {
     min-height: max-content;
@@ -49,9 +61,15 @@ tbody > td {
   .middle .t1 {
     width: 60px;
   }
-  .middle .t3,
-  .middle .t4 {
-    width: 80px;
+  .middle .t2 {
+    width: 130px;
+  }
+  .middle .t3 {
+    width: 50px;
+  }
+  .middle .t4,
+  .middle .t5 {
+    width: 30px;
   }
 }
 /* 모바일일때  */

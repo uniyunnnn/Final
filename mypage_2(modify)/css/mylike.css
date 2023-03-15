@@ -127,7 +127,7 @@
     /* 웹브라우저크기에 맞게 단 파이어폭스에서 적용이 안됨*/
     width: -moz-available;
     /* 이게 파이어폭스넓이에 맞춰서임. */
-    font-size: small;
+    font-size: 15px;
     max-width: 750px;
   }
 }
