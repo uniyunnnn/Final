@@ -410,6 +410,11 @@ input[type="radio"]:checked + label {
   background-color: #d9d9d9;
 }
 
+/* 나의위치 안보이게하려면.. */
+.my-city {
+  display: none;
+}
+
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .cotents {
     min-height: max-content;
@@ -460,6 +465,9 @@ input[type="radio"]:checked + label {
     font-size: large;
     margin-right: 25px;
     width: 88px;
+  }
+  .my-city select {
+    position: relative;
   }
 }
 

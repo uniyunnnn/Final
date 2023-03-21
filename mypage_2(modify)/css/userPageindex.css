@@ -118,15 +118,15 @@ h2 {
 .content-header-menu li:hover {
   background-color: #7ccf144a;
   border-radius: 15px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   z-index: 1;
-  transform: scale(1);
-  transition: all 400ms ease;
+  /* transform: scale(1);
+  transition: all 400ms ease; */
 }
 .content-header-menu li:active {
   background: rgba(78, 197, 61, 0.75);
   border-radius: 15px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
 }
 .content-header-menu #item-point {
   font-weight: bold;

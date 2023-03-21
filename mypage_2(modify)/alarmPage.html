@@ -2,213 +2,200 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <title>WeGo-badge</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="등산멤버 모집 커뮤니티" />
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./ico/favicon.ico" type="image/x-icon" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
-    <script src="./js/alarmPage.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/alarmPage.css" />
-  </head>
+    <!-- 
+    각 페이지 css추가
+  -->
+    <script src="./js/alarmPage.js" defer></script>
+    <!-- 
+    각 페이지 js추가
+  --></head>
 
   <body>
-    <div class="total-wrap">
-      <div id="pagewrapper">
-        <!-- hearder start -->
-        <header>
-          <div class="header">
-            <div class="logoDiv">
-              <a class="logo" href="./header.html">
-                <h1 class="blind">We Go</h1>
-              </a>
-            </div>
-            <div>
-              <nav>
-                <ul class="navbar">
-                  <li><a href="#">산정보</a></li>
-                  <li><a href="#">등산후기</a></li>
-                  <li><a href="#">랭킹</a></li>
-                  <li><a href="#">모집</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="user">
-              <!-- 로그인 상태 => 현재 display: none; 상태 -->
-              <img
-                id="userImg"
-                class="user-profile-img"
-                src="https://picsum.photos/id/684/600/400"
-                alt="회원 프로필 이미지"
-              />
-              <!-- 비로그인 상태 -->
-              <button class="login-btn"></button>
-              <div class="menubar">
-                <ul>
-                  <li><a href="../mypage/mypage.html">마이페이지</a></li>
-                  <li><a href="#">알림</a></li>
-                  <li><a href="#">문의하기</a></li>
-                  <li class="text-red"><a href="#">로그아웃</a></li>
-                </ul>
-              </div>
+    <div id="total-wrap">
+      <!-- hearder start -->
+      <header>
+        <div class="header">
+          <div class="logoDiv">
+            <a href="#">
+              <span class="wegoLogo"></span>
+              <span class="wogoTitle"></span>
+            </a>
+          </div>
+          <div>
+            <nav>
+              <ul class="navbar">
+                <li><a href="#">산정보</a></li>
+                <li><a href="#">등산후기</a></li>
+                <li><a href="#">랭킹</a></li>
+                <li><a href="#">모집</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="user">
+            <!-- 로그인 상태 => 현재 display: none; 상태 -->
+            <img
+              id="userImg"
+              class="user-profile-img"
+              src="https://picsum.photos/id/684/600/400"
+              alt="회원 프로필 이미지"
+            />
+            <!-- 비로그인 상태 -->
+            <button class="login-btn"></button>
+            <div class="menubar">
+              <ul>
+                <li><a href="../mypage/mypage.html">마이페이지</a></li>
+                <li><a href="#">알림</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li class="text-red"><a href="#">로그아웃</a></li>
+              </ul>
             </div>
           </div>
-        </header>
-        <!-- hearder end -->
+        </div>
+      </header>
+      <!-- hearder end -->
 
-        <!-- main start -->
-        <!-- <div class="header-wrapper">
-            <header id="wep-header">
-                <div class="web-left-header">
-                    <a href="#"><img src="./imgs/logo.svg" alt=""></a>
-                </div>
-                <div class="web-center-header">
-                    <ul class="header-menu">
-                        <li class="web-center-header-item"><a href="#">산정보</a></li>
-                        <li class="web-center-header-item"><a href="#">등산후기</a></li>
-                        <li class="web-center-header-item"><a href="#">랭킹</a></li>
-                        <li class="web-center-header-item"><a href="#">모집</a></li>
-                    </ul>
-                </div>
-                <div class="web-right-header">
-                    <a href="#"><img src="./imgs/문의.png" alt=""></a>
-                    <a href="#"><img src="./imgs/로그아웃.png" alt=""></a>
-                </div>
-            </header>
-        </div> -->
-        <!-- 
-        <header id="main-header">
-            <div class="left-header">
-                <a href="#"><img src="./imgs/alarm.png" alt=""></a>
-            </div>
-            <div class="center-header">
-                <a href="#"><img src="./imgs/logo.png" alt=""></a>
-            </div>
-            <div class="right-header">
-                <a href="#"><img class="right-header-img" src="./imgs/berger (1).png" alt=""></a>
-            </div>
-        </header> -->
+      <!-- main start -->
+      <section>
+        <!-- Contents -->
 
-        <header id="alarmHeader">
+        <div id="alarmHeader">
           <span class="text">알림</span>
           <span class="alarm-img"
-            ><img class="alarmSetpng" src="./imgs/alarmSet.png" alt=""
+            ><img class="alarmSetpng" src="./img/alarmSet.png" alt=""
           /></span>
-        </header>
-        <div class="alarm profile">
-          <h3>익명의 공룡님이 회원님의 사진을 좋아합니다.</h3>
-          <h5>1 시간 전</h5>
-          <div class="message profile">
-            <img src="./imgs/profile.png" alt="" />
-            <p>인생샷 건지는 포토존 다녀옴 >_<</p>
-          </div>
-        </div>
-        <div class="alarm mozip">
-          <h3>[긴급알림] 신청하신 등산 모집이 취소되었습니다.</h3>
-          <img class="attention" src="./imgs/Idea.png" alt="" />
-          <h5>1 시간 전</h5>
-          <br />
+          <aside id="alarm-set">
+            <input type="checkbox" id="toggle" hidden />
 
-          <div class="message mozip">
-            <p>모집 취소 사유: 주최자의 사정으로 모집이 취소되었어요.</p>
-          </div>
+            <div class="all">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">전체</span> 알림 ON / OFF</span
+              >
+            </div>
+            <div class="important">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">긴급</span> 알림 ON / OFF</span
+              >
+            </div>
+            <div class="badge">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">뱃지획득</span> 알림 ON / OFF</span
+              >
+            </div>
+            <div class="like">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">좋아요</span> 알림 ON / OFF</span
+              >
+            </div>
+            <div class="comment">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">내 글 댓글</span> 알림 ON / OFF</span
+              >
+            </div>
+            <div class="mention">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">내 댓글의 댓글</span> 알림 ON /
+                OFF</span
+              >
+            </div>
+            <div class="mozip">
+              <span class="toggleIcon">
+                <label for="toggle" class="toggleSwitch">
+                  <span class="toggleButton"></span>
+                </label>
+              </span>
+              <span class="onOfftext"
+                ><span class="highlight">모집</span> 알림 ON / OFF</span
+              >
+            </div>
+          </aside>
         </div>
-        <div class="alarm badge">
-          <h3>축하합니다!! 나의 두근두근 첫 등산 뱃지를 획득하셨습니다!!</h3>
-          <h5>1 시간 전</h5>
-          <div class="message badge">
-            <img src="./imgs/yellowBadge.png" alt="" />
-            <p>
-              첫 등산을 인증한 회원에게 주어지는 뱃지예요!! 앞으로 더 많은
-              뱃지를 모아서 프로등산러에 도전해보세요-!!
-            </p>
+        <div class="alarmbox">
+          <div class="alarm profile">
+            <h3>익명의 공룡님이 회원님의 사진을 좋아합니다.</h3>
+            <h5>1 시간 전</h5>
+            <div class="message profile">
+              <img src="./img/profile.png" alt="" />
+              <p>인생샷 건지는 포토존 다녀옴 >_<</p>
+            </div>
           </div>
-        </div>
-        <div class="alarm comment">
-          <h3>[댓글알림] 작성하신 글에 댓글이 달렸습니다.</h3>
-          <h5>1 시간 전</h5>
-          <div class="message comment">
-            <p>이말똥 : 와.. 완등이라니! 너무 멋져요-!! >_<</p>
-          </div>
-        </div>
-        <aside id="alarm-set">
-          <input type="checkbox" id="toggle" hidden />
+          <div class="alarm mozip">
+            <span class="mozipimg">
+              <h3>[긴급알림] 신청하신 등산 모집이 취소되었습니다.</h3>
+              <img class="attention" src="./img/Idea.png" alt="" />
+            </span>
+            <h5>1 시간 전</h5>
+            <br />
 
-          <div class="all">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">전체</span> 알림 ON / OFF</span
-            >
+            <div class="message mozip">
+              <p>모집 취소 사유: 주최자의 사정으로 모집이 취소되었어요.</p>
+            </div>
           </div>
-          <div class="important">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">긴급</span> 알림 ON / OFF</span
-            >
+          <div class="alarm badge">
+            <h3>축하합니다!! 나의 두근두근 첫 등산 뱃지를 획득하셨습니다!!</h3>
+            <h5>1 시간 전</h5>
+            <div class="message badge">
+              <img src="./img/yellowBadge.png" alt="" />
+              <p>
+                첫 등산을 인증한 회원에게 주어지는 뱃지예요!! 앞으로 더 많은
+                뱃지를 모아서 프로등산러에 도전해보세요-!!
+              </p>
+            </div>
           </div>
-          <div class="badge">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">뱃지획득</span> 알림 ON / OFF</span
-            >
+          <div class="alarm comment">
+            <h3>[댓글알림] 작성하신 글에 댓글이 달렸습니다.</h3>
+            <h5>1 시간 전</h5>
+            <div class="message comment">
+              <p>이말똥 : 와.. 완등이라니! 너무 멋져요-!! >_<</p>
+            </div>
           </div>
-          <div class="like">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">좋아요</span> 알림 ON / OFF</span
-            >
-          </div>
-          <div class="comment">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">내 글 댓글</span> 알림 ON / OFF</span
-            >
-          </div>
-          <div class="mention">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">내 댓글의 댓글</span> 알림 ON / OFF</span
-            >
-          </div>
-          <div class="mozip">
-            <span class="toggleIcon">
-              <label for="toggle" class="toggleSwitch">
-                <span class="toggleButton"></span>
-              </label>
-            </span>
-            <span class="onOfftext"
-              ><span class="highlight">모집</span> 알림 ON / OFF</span
-            >
-          </div>
-        </aside>
-      </div>
-      <div id="alarm-wrapper"></div>
+        </div>
+      </section>
+
       <!-- Footer Start -->
       <footer>
         <div class="footer">

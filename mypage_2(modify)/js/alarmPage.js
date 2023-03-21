@@ -3,34 +3,34 @@ const toggleIcon = document.querySelectorAll(".toggleIcon");
 
 toggleList.forEach(($toggle) => {
   $toggle.onclick = () => {
-    $toggle.classList.toggle('active');
     var motherNode = $toggle.parentElement;
+    if(motherNode.className == $('.all')){
+    } else{
+    $toggle.classList.toggle('active');
     motherNode.classList.toggle('active');
+    }
   }
 });
 
 
 var alarmSet = document.querySelector('#alarm-set');
-var alarmWrapper = document.querySelector('#alarm-wrapper');
+// var alarmWrapper = document.querySelector('#alarm-wrapper');
 var setButton = document.querySelector('.alarmSetpng');
 setButton.onclick = function(){
   alarmSet.classList.toggle('active');
   alarmWrapper.classList.toggle('active');
-  var toggleWrapper = document.querySelector('#alarm-wrapper');
+  // var toggleWrapper = document.querySelector('#alarm-wrapper');
   toggleWrapper.onclick = function(){
     alarmSet.classList.toggle('active');
-    alarmWrapper.classList.toggle('active');
+    // alarmWrapper.classList.toggle('active');
   }
 };
 
-$('.alarmSetpng').click(function () {
-  $('#alarm-set').animate({ width: '63%'}, 200); 
-  $('#alarm-set').animate({ opacity: '1'}, 800); 
+$('.alarmSetpng').click(function () { 
+  $('#alarm-set').animate({ opacity: '1'}, 400); 
   $('.toggleSwitch').animate({ opacity: '1'}, 400);
   $('.onOfftext').animate({ opacity: '1'}, 1200);
 });
-
-
 
 
 

@@ -8,6 +8,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 a {
@@ -28,6 +30,7 @@ ul {
 li {
   list-style: none;
 }
+
 .total-wrap {
   display: flex;
   flex-direction: column;
@@ -39,6 +42,7 @@ li {
   min-width: 375px;
   max-width: 1024px;
 }
+
 section {
   width: 96%;
 }
@@ -67,65 +71,111 @@ header {
 }
 
 .header div.logoDiv,
-div.user {
-  width: 180px;
-}
-
-.logo {
-  display: block;
-  width: 180px;
+.header .user {
+  width: 160px;
   height: 50px;
-  background: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
 
   transition: all 400ms ease;
 }
 
-.logo:hover {
+.header div.logoDiv {
+  display: flex;
+
+  justify-content: flex-start;
+
+  margin: 0 0 0 10px;
+}
+
+.header div.logoDiv > a {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wegoLogo {
+  display: block;
+  width: 90px;
+  height: 50px;
+  background: url(../img/WegoLogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  cursor: pointer;
+}
+
+.wogoTitle {
+  display: block;
+  width: 70px;
+  height: 50px;
+  background: url(../img/Wegotitle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  cursor: pointer;
+}
+
+.logoDiv:hover {
   z-index: 3;
   transform: scale(1.05);
   transition: all 400ms ease;
 }
 
 .navbar {
-  width: 100%;
   display: flex;
+
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+
   gap: 10px;
 }
 
 .navbar li {
-  display: inline-block;
-  padding: 0 25px;
+  box-sizing: border-box;
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 85px;
+
+  padding: 0 15px;
+  margin: 0 5px;
+
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 
   transition: all 400ms ease;
 }
 
+.navbar li a {
+  white-space: nowrap;
+}
+
 .navbar li:hover {
   border-radius: 20px;
-  padding: 10px 25px;
+  padding: 12px 15px;
   background-color: #fff;
 
-  z-index: 1;
+  z-index: 3;
   transform: scale(1.1);
   transition: all 400ms ease;
 }
 
 .user {
-  position: relative;
   display: flex;
+  position: relative;
+
   justify-content: flex-end;
+  align-items: center;
 }
 
 .user > img,
 .user > button {
-  margin: 0px 10px 0px;
+  margin: 0px 10px 0px 0;
 
   transition: all 400ms ease;
 }
@@ -147,7 +197,7 @@ div.user {
   padding: 10px 10px 30px;
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 30px;
   background-color: #fff;
   z-index: 2;
 }
@@ -235,7 +285,7 @@ div.user {
   width: 190px;
   border: 0;
   padding: 0 10px;
-  font-size: 16px;
+  font-size: 15px;
   outline: none;
   background: none;
 }
@@ -260,6 +310,7 @@ div.user {
   background: url(../svg/cancle.svg);
   background-repeat: no-repeat;
 }
+
 .search-bar button:hover {
   z-index: 1;
   transform: scale(1.2);
@@ -271,33 +322,33 @@ div.user {
   header {
     margin-bottom: 0px;
   }
-
   .header div.logoDiv,
-  div.user {
-    width: 40px;
-
-    margin: 0 5px;
+  .header .user {
+    width: 50px;
+    height: 50px;
   }
 
-  .logo {
-    width: 33px;
-    height: 33px;
-    background: url(../svg/main-icon.svg);
+  .wegoLogo {
+    width: 50px;
+    height: 50px;
+    background: url(../img/WegoLogo.png);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position-y: center;
     cursor: pointer;
+  }
+
+  .wogoTitle {
+    display: none;
+  }
+
+  .navbar {
+    gap: 5px;
   }
 
   .navbar li {
     padding: 0 5px;
-
-    /* font-size: 16px; */
-    font-size: 14px;
-  }
-
-  .user > img,
-  .user > button {
-    margin: 0px;
+    width: 65px;
   }
 
   .user-profile-img {
@@ -326,5 +377,16 @@ div.user {
   .search-bar {
     margin-top: 0px;
     margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    gap: 0px;
+  }
+
+  .navbar li {
+    padding: 0 5px;
+    margin: 0px;
   }
 }

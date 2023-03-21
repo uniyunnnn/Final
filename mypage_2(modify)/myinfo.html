@@ -27,8 +27,9 @@
       <header>
         <div class="header">
           <div class="logoDiv">
-            <a class="logo" href="./header.html">
-              <h1 class="blind">We Go</h1>
+            <a href="#">
+              <span class="wegoLogo"></span>
+              <span class="wogoTitle"></span>
             </a>
           </div>
           <div>
@@ -220,18 +221,20 @@
                     <label id="city1">시/도</label>
                     <label id="city2">시/군/구</label>
                   </span>
-                  <select
-                    name="sido1"
-                    id="sido1"
-                    class="sido"
-                    onchange="sidoFirst(this.value)"
-                  ></select>
-                  <select
-                    name="gugun1"
-                    id="gugun1"
-                    class="gugun"
-                    onchange="gugunSecond(this.value)"
-                  ></select>
+                  <span id="my-">
+                    <select
+                      name="sido1"
+                      id="sido1"
+                      class="sido"
+                      onchange="sidoFirst(this.value)"
+                    ></select>
+                    <select
+                      name="gugun1"
+                      id="gugun1"
+                      class="gugun"
+                      onchange="gugunSecond(this.value)"
+                    ></select
+                  ></span>
                 </p>
               </div>
 
@@ -316,50 +319,66 @@
               </div>
               <!-- 위 설정한값을 form으로 한번에 전송하나? 각자 가두데나? -->
               <div class="myinfo">
-                <button type="button" id="end">
-                  회원탈퇴
-                </button>
+                <button type="button" id="end">회원탈퇴</button>
                 <button type="button" id="upload">변경내용저장</button>
               </div>
-              
-            <!-- 회원탈퇴 모달창-->
-            <div class="withdraw-box">
-              <div class="withdraw-text">
-                <h2>탈퇴안내문구</h2>
-                <p>탈퇴시 모든 활동내역이 삭제됩니다.</br>탈퇴하시겠습니까?</p>
+
+              <!-- 회원탈퇴 모달창-->
+              <div class="withdraw-box">
+                <div class="withdraw-text">
+                  <h2>탈퇴안내문구</h2>
+                  <p>
+                    탈퇴시 모든 활동내역이 삭제됩니다.<br />탈퇴하시겠습니까?
+                  </p>
+                </div>
+                <div class="withdwaw-button">
+                  <button type="button" class="withdwaw-no">아니요</button>
+                  <button type="button" class="withdwaw-yes">예</button>
+                </div>
+                <div>
+                  <a href="#" class="closebutton3"
+                    ><ion-icon name="close-outline"></ion-icon
+                  ></a>
+                </div>
               </div>
-              <div class="withdwaw-button">
-                <button type="button" class="withdwaw-no">아니요</button>
-                <button type="button" class="withdwaw-yes">예</button>
+              <!-- 회원탈퇴2 모달창-->
+              <div class="withdraw-box2">
+                <div class="withdraw-text2">
+                  <h2>
+                    탈퇴하시려면 아래 입력창에<br />
+                    “ 회원탈퇴 ” 라고 입력해주세요.
+                  </h2>
+                  <input
+                    name="tx"
+                    type="text"
+                    placeholder="회원탈퇴문구입력창"
+                  />
+                </div>
+                <div class="withdwaw-button">
+                  <button type="button" class="withdwaw-no2">아니요</button>
+                  <button
+                    type="button"
+                    onClick="getTextValue()"
+                    class="withdwaw-yes2"
+                  >
+                    예
+                  </button>
+                </div>
+                <div>
+                  <a href="#" class="closebutton4"
+                    ><ion-icon name="close-outline"></ion-icon
+                  ></a>
+                </div>
               </div>
-              <div>
-                <a href="#" class="closebutton3"><ion-icon name="close-outline"></ion-icon></a>
+              <!-- 회원탈퇴3 모달창-->
+              <div class="withdraw-box3">
+                <div class="withdraw-text3">
+                  <h2 id="withdraw3h2">sdfd</h2>
+                </div>
+                <div class="withdwaw-button3">
+                  <button type="button" class="withdwaw-yes3">확인</button>
+                </div>
               </div>
-            </div>
-            <!-- 회원탈퇴2 모달창-->
-            <div class="withdraw-box2">
-              <div class="withdraw-text2">
-                <h2>탈퇴하시려면 아래 입력창에<br>
-                  “ 회원탈퇴 ” 라고 입력해주세요.</h2>
-                <input name="tx" type="text" placeholder="회원탈퇴문구입력창">
-              </div>
-              <div class="withdwaw-button">
-                <button type="button" class="withdwaw-no2">아니요</button>
-                <button type="button" onClick="getTextValue()" class="withdwaw-yes2">예</button>
-              </div>
-              <div>
-                <a href="#" class="closebutton4"><ion-icon name="close-outline"></ion-icon></a>
-              </div>
-            </div>
-            <!-- 회원탈퇴3 모달창-->
-            <div class="withdraw-box3">
-              <div class="withdraw-text3">
-                <h2 id="withdraw3h2">sdfd</h2>
-              </div>
-              <div class="withdwaw-button3">
-                <button type="button" class="withdwaw-yes3">확인</button>
-              </div>
-            </div>
 
               <!-- 프로필 수정  -->
               <div class="myinfo-update">
